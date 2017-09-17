@@ -20,7 +20,10 @@ def rotate_character(char, rot):
 def rotate_string(text,rot):
     message=""
     for char in text:
-        letter=rotate_character(char,rot)
-        message+=letter
+        if char.isalpha():
+            letter=rotate_character(char,rot)
+            message+=letter
+        else:
+            message+=char
     return message
 
